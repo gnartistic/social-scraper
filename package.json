@@ -1,0 +1,33 @@
+{
+  "name": "social-scraper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnartistic/social-scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gnartistic/social-scraper/issues"
+  },
+  "homepage": "https://github.com/gnartistic/social-scraper#readme",
+  "dependencies": {
+    "axios": "^1.8.1",
+    "cheerio": "^1.0.0",
+    "chromedriver": "^133.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3",
+    "openai": "^4.86.1",
+    "puppeteer": "^24.3.1",
+    "selenium-webdriver": "^4.29.0"
+  },
+  "type": "module",
+  "description": ""
+}
