@@ -7,7 +7,7 @@ import path from "path";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;  // ✅ Uses Railway's assigned port
 const OUTPUT_FILE = path.join(process.cwd(), "tweets.json");
 
 app.use(cors());
@@ -24,6 +24,6 @@ app.get("/tweets", (req, res) => {
 });
 
 // **Start Server**
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {  // ✅ Bind to 0.0.0.0 for Railway
+  console.log(`🚀 Server running on port ${PORT}`);
 });
