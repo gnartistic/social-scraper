@@ -7,11 +7,16 @@ import path from "path";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8080;  // ✅ Uses Railway's assigned port
+const PORT = process.env.PORT || 8080;
 const OUTPUT_FILE = path.join(process.cwd(), "tweets.json");
 
 app.use(cors());
 app.use(express.json());
+
+// **Root Route**
+app.get("/", (req, res) => {
+  res.send("🚀 Social Scraper API is running!");
+});
 
 // **Retrieve stored tweets & comments**
 app.get("/tweets", (req, res) => {
@@ -24,6 +29,6 @@ app.get("/tweets", (req, res) => {
 });
 
 // **Start Server**
-app.listen(PORT, "0.0.0.0", () => {  // ✅ Bind to 0.0.0.0 for Railway
+app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
